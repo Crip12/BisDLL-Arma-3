@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1528A0D0-246A-449E-AD45-90A313CC24A7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BisDll</RootNamespace>
+    <AssemblyName>BisDll</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\ColorP.cs" />
+    <Compile Include="Common\Math\Matrix3P.cs" />
+    <Compile Include="Common\Math\Matrix4P.cs" />
+    <Compile Include="Common\Math\Quaternion.cs" />
+    <Compile Include="Common\Math\Vector3P.cs" />
+    <Compile Include="Common\Math\Vector3PCompressed.cs" />
+    <Compile Include="Common\PackedColor.cs" />
+    <Compile Include="Compression\LZO.cs" />
+    <Compile Include="Compression\LZSS.cs" />
+    <Compile Include="Methods.cs" />
+    <Compile Include="Model\Conversion.cs" />
+    <Compile Include="Model\FaceFlags.cs" />
+    <Compile Include="Model\LodName.cs" />
+    <Compile Include="Model\MLOD\AnimationTagg.cs" />
+    <Compile Include="Model\MLOD\Face.cs" />
+    <Compile Include="Model\MLOD\LockTagg.cs" />
+    <Compile Include="Model\MLOD\MassTagg.cs" />
+    <Compile Include="Model\MLOD\MLOD.cs" />
+    <Compile Include="Model\MLOD\MLOD_LOD.cs" />
+    <Compile Include="Model\MLOD\NamedSelectionTagg.cs" />
+    <Compile Include="Model\MLOD\Point.cs" />
+    <Compile Include="Model\MLOD\PropertyTagg.cs" />
+    <Compile Include="Model\MLOD\SelectedTagg.cs" />
+    <Compile Include="Model\MLOD\SharpEdgesTagg.cs" />
+    <Compile Include="Model\MLOD\Tagg.cs" />
+    <Compile Include="Model\MLOD\UVSetTagg.cs" />
+    <Compile Include="Model\MLOD\Vertex.cs" />
+    <Compile Include="Model\ODOL\AnimationRTPair.cs" />
+    <Compile Include="Model\ODOL\AnimationRTWeight.cs" />
+    <Compile Include="Model\ODOL\Animations.cs" />
+    <Compile Include="Model\ODOL\BuoyancyType.cs" />
+    <Compile Include="Model\ODOL\BuoyancyTypeSpheres.cs" />
+    <Compile Include="Model\ODOL\BuoyantPoint.cs" />
+    <Compile Include="Model\ODOL\ClipFlags.cs" />
+    <Compile Include="Model\ODOL\EAnimationType.cs" />
+    <Compile Include="Model\ODOL\EmbeddedMaterial.cs" />
+    <Compile Include="Model\ODOL\Keyframe.cs" />
+    <Compile Include="Model\ODOL\LoadableLodInfo.cs" />
+    <Compile Include="Model\ODOL\LOD.cs" />
+    <Compile Include="Model\ODOL\MapType.cs" />
+    <Compile Include="Model\ODOL\NamedSelection.cs" />
+    <Compile Include="Model\ODOL\ODOL.cs" />
+    <Compile Include="Model\ODOL\ODOL_ModelInfo.cs" />
+    <Compile Include="Model\ODOL\Polygon.cs" />
+    <Compile Include="Model\ODOL\Polygons.cs" />
+    <Compile Include="Model\ODOL\Proxy.cs" />
+    <Compile Include="Model\ODOL\SBSource.cs" />
+    <Compile Include="Model\ODOL\Section.cs" />
+    <Compile Include="Model\ODOL\Skeleton.cs" />
+    <Compile Include="Model\ODOL\StageTexture.cs" />
+    <Compile Include="Model\ODOL\StageTransform.cs" />
+    <Compile Include="Model\ODOL\STPair.cs" />
+    <Compile Include="Model\ODOL\STPairCompressed.cs" />
+    <Compile Include="Model\ODOL\STPairUncompressed.cs" />
+    <Compile Include="Model\ODOL\SubSkeletonIndexSet.cs" />
+    <Compile Include="Model\ODOL\UVSet.cs" />
+    <Compile Include="Model\ODOL\VertexIndex.cs" />
+    <Compile Include="Model\ODOL\VertexIndexExtensions.cs" />
+    <Compile Include="Model\ODOL\VertexNeighborInfo.cs" />
+    <Compile Include="Model\ODOL\VerySmallArray.cs" />
+    <Compile Include="Model\P3D.cs" />
+    <Compile Include="Model\P3D_FaceFlags.cs" />
+    <Compile Include="Model\P3D_LOD.cs" />
+    <Compile Include="Model\PointFlags.cs" />
+    <Compile Include="Model\Resolution.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stream\BinaryReaderEx.cs" />
+    <Compile Include="Stream\BinaryWriter.cs" />
+    <Compile Include="Stream\IDeserializable.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
