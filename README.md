@@ -6,4 +6,4 @@ Join: https://discord.gg/aAsYFUu
 
 
 
-https://forums.arma3-roleplay.com/
+http://forums.scripyleaks.club/
